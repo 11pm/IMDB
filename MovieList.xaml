@@ -1,0 +1,41 @@
+﻿<controls:MetroWindow x:Class="IMDB.MovieList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="MovieList" Height="473.45" Width="816.636" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Icons.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Amber.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <DataGrid x:Name="listGrid" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="359" Width="auto" AutoGenerateColumns="True" IsReadOnly="True" />
+        <!--<ListBox x:Name="movies" HorizontalAlignment="Left" Height="235" VerticalAlignment="Top" Width="497" Margin="10,43,0,0"/>-->
+        <Button Width="75"
+        Height="75"
+        Name="back"
+        Click="back_Click"
+        VerticalAlignment="Top"
+        Style="{DynamicResource MetroCircleButtonStyle}" Margin="12,364,722,0">
+            <StackPanel Orientation="Vertical">
+                <Rectangle Width="30"
+                Height="30">
+                    <Rectangle.Fill>
+                        <VisualBrush Stretch="Fill"
+                      Visual="{StaticResource appbar_arrow_left}" />
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock Text="Back" />
+            </StackPanel>
+        </Button>
+    </Grid>
+</controls:MetroWindow>
