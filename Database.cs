@@ -23,10 +23,10 @@ namespace IMDB
         //Only need to init once, data stays alive
         public static void Connect()
         {
-            server = "212.30.218.34";
+            server = "127.0.0.1";
             database = "alexander_movielist";
-            uid = "alexander";
-            password = "password";
+            uid = "root";
+            password = "";
 
             conString = "server=" + server + ";userid=" + uid + ";password=" + password + ";database=" + database;
             SqlConnection = new MySqlConnection(conString);
